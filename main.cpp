@@ -51,12 +51,14 @@ void calculadora() {
   if(c != 0) { 
    cout << "A soma resulta em: " << endl;
     cout << a + c << endl;
+  reinicio();
   } else {
     system("clear||cls");
   cout << "Houve um erro!" << endl;
   cout << "Por favor, digite o segundo numero: " << endl;
   cin >> c;
   cout << a + c << endl;
+  reinicio();
   }
   } else if(b == "-") {
     cout << "Digite o segundo numero: " << endl;
@@ -64,12 +66,14 @@ void calculadora() {
   if(c != 0) {
     cout << "A some resulta em: " << endl;
     cout << a - c << endl;
+  reinicio();
   } else {
     system("clear||cls");
   cout << "Houve um erro!" << endl;
   cout << "Por favor, digite o segundo numero: " << endl;
   cin >> c;
   cout << a - c << endl;
+  reinicio();
   }
   } else if(b == "*") {
     cout << "Digite o segundo numero: " << endl;
@@ -77,12 +81,14 @@ void calculadora() {
   if(c != 0) {
     cout << "A multiplicação resulta em: " << endl;
     cout << a * c << endl;
+  reinicio();
     } else {
       system("clear||cls");
   cout << "Houve um erro!" << endl;
   cout << "Por favor, digite o segundo numero: " << endl;
   cin >> c;
   cout << a * c << endl;
+  reinicio();
     }
   } else if(b == "/") {
     cout << "Digite o segundo numero: " << endl;
@@ -90,12 +96,14 @@ void calculadora() {
   if(c != 0){
     cout << "A divisão resulta em: " << endl;
     cout << a / c << endl;
+  reinicio();
   } else {
     system("clear||cls");
   cout << "Houve um erro!" << endl;
   cout << "Por favor, digite o segundo numero: " << endl;
   cin >> c;
   cout << a / c << endl;
+  reinicio();
   }
   } else {
     system("clear||cls");
@@ -124,4 +132,19 @@ void erroinicio() {
   } else {
     erroinicio();
   }
+}
+
+void reinicio() {
+  char varreinicio;
+ cout << "Deseja reiniciar a calculadora? " << endl;
+ cin >> varreinicio;
+if(varreinicio == 'y') {
+  system("clear||cls");
+  calculadora();
+} if (varreinicio == 'n') {
+  system("exit");
+} else {
+  cout << "Erro!" << endl;
+  reinicio();
+}
 }
